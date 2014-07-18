@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" user="cscdev" path="Commissioning/startPCrate">
+        <FunctionManager name="config" hostname="emuslice02" port="12000"
+                        qualifiedResourceType="rcms.fm.resource.qualifiedresource.FunctionManager"
+			sourceURL="http://emuslice02.cern.ch:12000/functionmanagers/cscLevelOneFM.jar" 
+		        className="rcms.fm.app.cscLevelOne.MyFunctionManager"
+                        role="CSC" >
+
+<!-- PeripheralCrate XDAQ Application -->
+                <XdaqExecutive hostname="vmepc-e1x07-21-01.cern.ch" port="20011"
+                                urn="urn:xdaq-application:lid=0"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqExecutive"
+                                instance="0"
+                                pathToExecutive="/opt/xdaq/bin/xdaq.exe"
+                                unixUser="cscupdate"
+                                logLevel="DEBUG"
+                                logURL="file:/tmp/startPCrate.log"
+                                environmentString="HOME=/home/cscupdate BUILD_HOME=/home/cscupdate/TriDAS LD_LIBRARY_PATH=/home/cscupdate/TriDAS/x86_64_slc5/lib:/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_ZONE=emu904 XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux">
+                        <configFile location="file">/home/cscupdate/config/pc/pc-startPCrate.xml</configFile>
+                </XdaqExecutive>
+                <XdaqApplication className="emu::pc::EmuPeripheralCrateConfig" hostname="vmepc-e1x07-21-01.cern.ch" port="20011"
+                                urn="urn:xdaq-application:lid=70"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqApplication"
+                                instance="0" />
+
+<!-- PeripheralCrateBroadcast XDAQ Application-->
+                <XdaqExecutive hostname="vmepc-e1x07-21-01.cern.ch" port="20020"
+                                urn="urn:xdaq-application:lid=0"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqExecutive"
+                                instance="0"
+                                 pathToExecutive="/opt/xdaq/bin/xdaq.exe"
+                                unixUser="cscupdate"
+                                logLevel="DEBUG"
+			        logURL="file:/tmp/xdaq-pcb-cscupdate.log"	
+                                environmentString="HOME=/home/cscupdate BUILD_HOME=/home/cscupdate/TriDAS LD_LIBRARY_PATH=/home/cscupdate/TriDAS/x86_64_slc5/lib:/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_ZONE=emu904 XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux">
+                        <configFile location="file">/home/cscupdate/config/pc/pc-startPCrate.xml</configFile>
+                </XdaqExecutive>
+                <XdaqApplication className="emu::pc::EmuPeripheralCrateBroadcast" hostname="vmepc-e1x07-21-01.cern.ch" port="20020"
+                                urn="urn:xdaq-application:lid=50"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqApplication"
+                                instance="0" />
+
+                <Service name="JobControl"
+                                hostname="vmepc-e1x07-21-01.cern.ch" port="9999" urn="urn:xdaq-application:lid=10"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.JobControl" />
+
+        </FunctionManager>
+</Configuration>
+

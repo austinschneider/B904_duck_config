@@ -1,0 +1,24 @@
+39,40c39,40
+< 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+<       <configFile location="file">/afs/cern.ch/user/a/aysen/public/me11/TriDAS/config/pc/aysen_YellowPage.xml</configFile>
+---
+> 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11_v2/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+>       <configFile location="file">/afs/cern.ch/user/a/aysen/public/me11_v2/TriDAS/config/pc/aysen_YellowPage.xml</configFile>
+60c60
+< 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+---
+> 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11_v2/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+81c81
+< 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+---
+> 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11_v2/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+96c96
+< 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+---
+> 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11_v2/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+110,111c110,111
+< 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+<       <configFile location="file">/afs/cern.ch/user/a/aysen/public/me11/TriDAS/config/step/STEP.xml</configFile>
+---
+> 		   environmentString="HOME=/home/cscme11 BUILD_HOME=/afs/cern.ch/user/a/aysen/public/me11_v2/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+>       <configFile location="file">/afs/cern.ch/user/a/aysen/public/me11_v2/TriDAS/config/step/STEP.xml</configFile>

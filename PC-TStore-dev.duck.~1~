@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" user="cscpro" path="PC-TStore-dev">
+        <FunctionManager name="config" hostname="cmsrc-csc.cms" port="12000"
+                        qualifiedResourceType="rcms.fm.resource.qualifiedresource.FunctionManager"
+			sourceURL="http://cmsrc-csc.cms:12000/functionmanagers/cscLevelOneFM.jar" 
+		        className="rcms.fm.app.cscLevelOne.MyFunctionManager"
+                        role="CSC" >
+
+<!-- PeripheralCrate TStore -->
+                <XdaqExecutive hostname="emuupgrade1.cern.ch" port="30050"
+                                urn="urn:xdaq-application:lid=0"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqExecutive"
+                                instance="0"
+                                pathToExecutive="/opt/xdaq/bin/xdaq.exe"
+                                unixUser="cscupdate"
+                                logLevel="DEBUG"
+                                logURL="file:/tmp/pc-tstore.log"
+                                environmentString="HOME=/home/cscupdate BUILD_HOME=/home/cscupdate/TriDAS TNS_ADMIN=/home/cscupdate LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc6 XDAQ_OS=linux XDAQ_ZONE=emu11">
+                        <configFile location="file">/home/cscupdate/config/db/pc-tstore-dev.xml</configFile>
+                </XdaqExecutive>
+                <XdaqApplication className="emu::pc::EmuPCrateConfigTStore" hostname="emuupgrade1.cern.ch" port="30050"
+                                urn="urn:xdaq-application:lid=30"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqApplication"
+                                instance="0" />
+                <XdaqApplication className="tstore::TStore" hostname="emuupgrade1.cern.ch" port="30050"
+                                urn="urn:xdaq-application:lid=120"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqApplication"
+                                instance="0" />
+ 
+
+               <Service name="JobControl"
+                                hostname="emuupgrade1.cern.ch" port="9999" urn="urn:xdaq-application:lid=10"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.JobControl" />
+
+        </FunctionManager>
+</Configuration>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" user="cscpro" path="PC-TStore-dev">
+        <FunctionManager name="config" hostname="cmsrc-csc.cms" port="12000"
+                        qualifiedResourceType="rcms.fm.resource.qualifiedresource.FunctionManager"
+			sourceURL="http://cmsrc-csc.cms:12000/functionmanagers/cscLevelOneFM.jar" 
+		        className="rcms.fm.app.cscLevelOne.MyFunctionManager"
+                        role="CSC" >
+
+<!-- PeripheralCrate TStore -->
+                <XdaqExecutive hostname="emume11.cern.ch" port="30050"
+                                urn="urn:xdaq-application:lid=0"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqExecutive"
+                                instance="0"
+                                pathToExecutive="/opt/xdaq/bin/xdaq.exe"
+                                unixUser="cscme11"
+                                logLevel="DEBUG"
+                                logURL="file:/tmp/pc-tstore.log"
+                                environmentString="HOME=/home/cscme11 BUILD_HOME=/home/cscme11/XDAQ/11/dbdev/TriDAS TNS_ADMIN=/home/cscme11 LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11">
+                        <configFile location="file">/home/cscme11/config/db/pc-tstore-dev.xml</configFile>
+                </XdaqExecutive>
+                <XdaqApplication className="emu::pc::EmuPCrateConfigTStore" hostname="emume11.cern.ch" port="30050"
+                                urn="urn:xdaq-application:lid=30"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqApplication"
+                                instance="0" />
+                <XdaqApplication className="tstore::TStore" hostname="emume11.cern.ch" port="30050"
+                                urn="urn:xdaq-application:lid=120"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqApplication"
+                                instance="0" />
+    <!-- Yellow Page -->
+    <XdaqExecutive hostname="emume11.cern.ch"
+		   port="20011"
+		   urn="urn:xdaq-application:lid=0"
+		   qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqExecutive"
+		   instance="0"
+		   pathToExecutive="/opt/xdaq/bin/xdaq.exe"
+		   unixUser="cscme11"
+		   logLevel="INFO"
+		   logURL="file:/tmp/yellow-page-cscme11.log"
+		   environmentString="HOME=/home/cscme11 BUILD_HOME=/home/cscme11/XDAQ/11/dbdev/TriDAS LD_LIBRARY_PATH=/opt/xdaq/lib XDAQ_ROOT=/opt/xdaq XDAQ_SETUP_ROOT=/opt/xdaq/share XDAQ_DOCUMENT_ROOT=/opt/xdaq/htdocs XDAQ_PLATFORM=x86_64_slc5 XDAQ_OS=linux XDAQ_ZONE=emu11 PATH=/bin:/usr/bin">
+      <configFile location="file">/home/cscme11/config/db/pc-tstore-dev.xml</configFile>
+    </XdaqExecutive>
+    <XdaqApplication className="emu::pc::EmuPeripheralCrateConfig"
+		     hostname="emume11.cern.ch"
+		     port="20011"
+		     urn="urn:xdaq-application:lid=70"
+		     qualifiedResourceType="rcms.fm.resource.qualifiedresource.XdaqApplication"
+		     instance="0"/>
+
+
+               <Service name="JobControl"
+                                hostname="emume11.cern.ch" port="9999" urn="urn:xdaq-application:lid=10"
+                                qualifiedResourceType="rcms.fm.resource.qualifiedresource.JobControl" />
+
+        </FunctionManager>
+</Configuration>
